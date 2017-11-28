@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <span>Personal Income Tax 60</span>
+</mat-toolbar>
+      
+<mat-horizontal-stepper [linear]="isLinear">
+
+        <mat-step>        
+            <ng-template matStepLabel>Fill Personal Data</ng-template>
+            <app-dynamic-form [fields]="fieldspersonal"></app-dynamic-form>        
+        </mat-step>
+
+        <mat-step>
+          <ng-template matStepLabel>Fill you income</ng-template>
+          <app-dynamic-form [fields]="fieldsincomedefault" [addfields]="1"></app-dynamic-form>
+        </mat-step>
+    
+        <mat-step>
+          <ng-template matStepLabel>Fill Allowance</ng-template>
+          <app-dynamic-form [fields]="fieldsallowance" [addfields]="2"></app-dynamic-form>
+
+        </mat-step>
+    
+        
+    
+      <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+</mat-horizontal-stepper>
