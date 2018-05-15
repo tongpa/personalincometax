@@ -55,6 +55,7 @@
   },
   "defaults": {
     "styleExt": "css",
+	"serve": { "host": "0.0.0.0"},
     "component": {}
   }
 }
